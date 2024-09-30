@@ -1,5 +1,5 @@
 import { useSessionQuery } from "@/entities/session/queries";
-import { SignOutButton } from "@/features/auth";
+import {AdminButton, SignOutButton} from "@/features/auth";
 
 export function Profile() {
   const { data: session } = useSessionQuery();
@@ -10,6 +10,7 @@ export function Profile() {
     <div className="flex gap-2 items-center">
       {session?.email}
       <SignOutButton />
+      <AdminButton />
     </div>
   );
 }

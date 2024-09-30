@@ -1,10 +1,14 @@
 import clsx from "clsx";
+import {ROUTES} from "@/shared/constants/routes";
+import {UiLink} from "@/shared/ui/ui-link";
 
 export function UiLogo({ className }: { className?: string }) {
   return (
     <div className={clsx(className, "flex items-center gap-2 text-xl")}>
       <Shield className="w-12 h-12" />
-      Easy Block
+      <UiLink className="text-center" href={ROUTES.HOME}>
+        HOME
+      </UiLink>
     </div>
   );
 }
